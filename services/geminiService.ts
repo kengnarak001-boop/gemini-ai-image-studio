@@ -1,8 +1,8 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export async function generateGeminiImage(prompt: string): Promise<string> {
   // Always create fresh instance to ensure correct API key usage
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenerativeAI({ apiKey: process.env.API_KEY });
   
   try {
     const response = await ai.models.generateContent({
